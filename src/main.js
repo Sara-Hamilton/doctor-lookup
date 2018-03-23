@@ -42,7 +42,6 @@ $(document).ready(function() {
     $('#reset-button').show();
     let search = new DoctorSearch(searchTerm, limit, searchType);
     search.getDoctorData(showData);
-    // doctorSearch(searchTerm, limit, searchType);
   });
 
   $('#reset-button').click(function() {
