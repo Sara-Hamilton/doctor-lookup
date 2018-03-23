@@ -3,10 +3,11 @@ import { specialtySearch } from './js/api.js';
 
 
 $(document).ready(function() {
-  $('#condition-form').submit(function(event) {
+  $("#condition-form").submit(function(event) {
   event.preventDefault();
   const condition = $("#condition").val();
   const limit = $("#limit").val();
+  $("#condition-well").hide();
   specialtySearch(condition, limit);
   });
 });

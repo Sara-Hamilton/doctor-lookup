@@ -7,6 +7,7 @@ export function specialtySearch(condition, limit) {
       format: 'json'
     },
     success: function(response) {
+      $('#condition-first-name').append(`<h3>Doctors who treat ${condition}</h3>`);
       if (response.data.length === 0) {
         $('.error').text('The search provided no matching results.')
       }
