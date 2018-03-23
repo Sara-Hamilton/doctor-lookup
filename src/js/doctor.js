@@ -1,4 +1,4 @@
-export function comboSearch(searchTerm, limit, type) {
+export function doctorSearch(searchTerm, limit, type) {
 
   let searchWord = "";
   let searchTitle = "";
@@ -9,8 +9,6 @@ export function comboSearch(searchTerm, limit, type) {
     searchWord = "name";
     searchTitle = `Doctors in Portland with name ${searchTerm}`;
   }
-  console.log("type", type);
-  console.log("searchWord", searchWord);
 
   $.ajax({
     url: `https://api.betterdoctor.com/2016-03-01/doctors?${searchWord}=${searchTerm}&location=or-portland&skip=0&limit=${limit}&user_key=${process.env.exports.apiKey}`,

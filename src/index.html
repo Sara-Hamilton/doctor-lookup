@@ -18,70 +18,31 @@
     <div class="row">
       <div class="col-md-6">
 
-      <div class="well" id="search-well">
-        <form id="search-form">
-          <h3>Select Search Criteria</h3>
-          <div class="radio">
-            <label><input type="radio" name="search" value="condition">Condition  - example: sore throat or ear ache</label>
-          </div>
-          <div class="radio">
-            <label><input type="radio" name="search" value="name">Doctor's name - example: Jones or Anne</label>
-          </div>
-          <div class="form-group">
-            <label for="condition">Search Term</label>
-            <input type="text" id="search-term" class="form-control">
-          </div>
-          <div class="form-group">
-            <label for="limit">Maximum number of results to return up to 100</label>
-            <input type="number" id="limit" max="100" class="form-control">
-          </div>
-          <button type="submit" class="btn btn-info">Submit</button>
-        </form>
-      </div>
+        <div class="well">
+          <form id="search-form">
+            <h3>Select Search Criteria</h3>
+            <div class="radio">
+              <label><input type="radio" name="search" value="condition">Condition  - example: sore throat or ear ache</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="search" value="name">Doctor's name - example: Jones or Anne</label>
+            </div>
+            <div class="form-group">
+              <label for="condition">Search Term</label>
+              <input type="text" id="search-term" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="limit">Maximum number of results to return up to 100</label>
+              <input type="number" id="limit" max="100" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-info">Submit</button>
+          </form>
+        </div>
 
-
-      <!-- <div class="well" id="condition-well">
-        <form id="condition-form">
-          <h3>Search by Condition</h3>
-          <p>example: sore throat or ear ache</p>
-          <div class="form-group">
-            <label for="condition">Condition</label>
-            <input type="text" id="condition" class="form-control">
-          </div>
-          <div class="form-group">
-            <label for="condition-limit">Maximum number of results to return up to 100</label>
-            <input type="number" id="condition-limit" max="100" class="form-control">
-          </div>
-          <button type="submit" class="btn btn-info">Submit</button>
-        </form>
+        <div id="results"></div>
+        <div class="error"></div>
       </div>
     </div>
-
-    <div class="col-md-6">
-      <div class="well" id="doctor-name-well">
-        <form id="doctor-name-form">
-          <h3>Search by Doctor's Name</h3>
-          <p>example: Jones or Anne</p>
-          <div class="form-group">
-            <label for="doctor-name">Doctor's name</label>
-            <input type="text" id="doctor-name" class="form-control">
-          </div>
-          <div class="form-group">
-            <label for="name-limit">Maximum number of results to return up to 100</label>
-            <input type="number" id="name-limit" max="100" class="form-control">
-          </div>
-          <button type="submit" class="btn btn-info">Submit</button>
-        </form>
-      </div>
-    </div> -->
-
-
-
-  <div id="results"></div>
-  <div class="error"></div>
-</div>
-</div>
-
   </div>
 </body>
 
