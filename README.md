@@ -17,8 +17,8 @@ This is the Epicodus weekly project for week 2 of the JavaScript course. It uses
 | A user can enter a medical issue to receive a list of doctors in the Portland area that fit the search query. | "sore throat" | a list of doctors that treat sore throats |
 | A user can enter a name to receive a list of doctors in the Portland area that fit the search query. | "Smith" | a list of all doctors with the name Smith |
 | If the query response includes any doctors, the following information is included about each doctor: first name, last name, address, phone number, website and whether or not the doctor is accepting new patients | query: doctors with name Smith | John Smith, 123 Elm Street, 503-555-5555, bestdoctor.com, accepting new patients|
-| If the API call results in an error (any message not a 200 OK), the application returns a notification that states what the error is. | error:404 | response: "file not found" |
-| If the query response doesn't include any doctors (for instance, if no doctors meet the search criteria), the application should return a notification that states that no doctors meet the criteria. | query: doctors with the name Xyzoo | response: "The search provided no matching results."|
+| If the API call results in an error (any message not a 200 OK), the application returns a notification that states what the error is. | limit: -3 | response: "There was a 400 error handling your request - Bad Request" |
+| If the query response doesn't include any doctors (for instance, if no doctors meet the search criteria), the application returns a notification that states that no doctors meet the criteria. | query: doctors with the name Xyzoo | response: "The search provided no matching results."|
 
 
 ## Technologies Used
