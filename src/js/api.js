@@ -13,7 +13,7 @@ export function specialtySearch(condition, limit) {
     let firstName = response.data[0].profile.first_name;
     let lastName = response.data[0].profile.last_name;
     let address = response.data[0].practices[0].visit_address;
-    let phone = response.data[0].practices[0].phones;
+    let phone = response.data[0].practices[0].phones[0];
     let website = response.data[0].practices[0].website;
     let newPatients = response.data[0].practices[0].accepts_new_patients;
     console.log("first", firstName);
@@ -22,7 +22,11 @@ export function specialtySearch(condition, limit) {
     console.log("phone", phone);
     console.log("web", website);
     console.log("new patients", newPatients);
-    $('#condition-first-name').append(`<p>Name: ${firstName} ${lastName}</p>`);
+    $('#condition-first-name').append(`<p>Name: ${firstName} ${lastName}</p>
+                                        <p>Address: ${address.street}, ${address.city}, ${address.state} ${address.zip}</p>
+                                        <p>Phone: ${phone.number} Type: ${phone.type}</p>
+                                        <p>Website: ${website}</p>
+                                        <p>Accepting new patients: ${newPatients}</p>`);
   },
   error: function() {
     $('.error').text(`There was a problem.`)
