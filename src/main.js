@@ -1,6 +1,7 @@
 import './styles.css';
 import { conditionSearch } from './js/condition.js';
 import { nameSearch } from './js/name.js';
+import { comboSearch } from './js/combo.js';
 
 $(document).ready(function() {
   $("#condition-form").submit(function(event) {
@@ -9,7 +10,8 @@ $(document).ready(function() {
     const conditionLimit = $("#condition-limit").val();
     $(".well").hide();
     $('#reset-button').show();
-    conditionSearch(condition, conditionLimit);
+    // conditionSearch(condition, conditionLimit);
+    comboSearch(condition, conditionLimit, "condition");
   });
 
   $("#doctor-name-form").submit(function(event) {
@@ -18,7 +20,8 @@ $(document).ready(function() {
     const nameLimit = $("#name-limit").val();
     $(".well").hide();
     $('#reset-button').show();
-    nameSearch(doctorName, nameLimit);
+    // nameSearch(doctorName, nameLimit);
+    comboSearch(doctorName, nameLimit, "name");
   });
 
   $('#reset-button').click(function(event) {
