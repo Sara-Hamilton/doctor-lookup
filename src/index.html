@@ -1,36 +1,61 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
-    <meta charset="utf-8">
-    <title>Doctor Lookup</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="jumbotron">
-        <h1>Doctor Lookup</h1>
-        <p>Find doctors in Portland</p>
-      </div>
-      <div class="well" id="condition-well">
-        <form id="condition-form">
-          <h3>Search by Condition</h3>
-          <p>example: sore throat or ear ache</p>
-          <div class="form-group">
-            <label for="condition">Condition</label>
-            <input type="text" id="condition" class="form-control">
-          </div>
-          <div class="form-group">
-            <label for="limit">Maximum number of results ro return</label>
-            <input type="number" id="limit" class="form-control">
-          </div>
-          <button type="submit" class="btn btn-info">Submit</button>
-        </form>
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+  <meta charset="utf-8">
+  <title>Doctor Lookup</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Doctor Lookup</h1>
+      <p>Find doctors in Portland</p>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+
+        <div class="well" id="condition-well">
+          <form id="condition-form">
+            <h3>Search by Condition</h3>
+            <p>example: sore throat or ear ache</p>
+            <div class="form-group">
+              <label for="condition">Condition</label>
+              <input type="text" id="condition" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="condition-limit">Maximum number of results ro return up to 100</label>
+              <input type="number" id="condition-limit" min="0" max="100" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-info">Submit</button>
+          </form>
+        </div>
       </div>
 
-    <div id="condition-first-name"></div>
+      <div class="col-md-6">
+        <div class="well" id="doctor-name-well">
+          <form id="doctor-name-form">
+            <h3>Search by Doctor's Name</h3>
+            <p>example: Jones or Anne</p>
+            <div class="form-group">
+              <label for="doctor-name">Doctor's name</label>
+              <input type="text" id="doctor-name" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="name-limit">Maximum number of results ro return up to 100</label>
+              <input type="number" id="name-limit" min="0" max="100" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-info">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="results"></div>
     <div class="error"></div>
 
   </div>
-  </body>
+</body>
+
 </html>

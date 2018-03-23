@@ -1,13 +1,12 @@
-export function conditionSearch(condition, limit) {
+export function nameSearch(name, limit) {
   $.ajax({
-    url:
-    `https://api.betterdoctor.com/2016-03-01/doctors?query=${condition}&location=or-portland&skip=0&limit=${limit}&user_key=${process.env.exports.apiKey}`,
+    url: `https://api.betterdoctor.com/2016-03-01/doctors?name=${name}&location=or-portland&skip=0&limit=${limit}&user_key=${process.env.exports.apiKey}`,
     type: 'GET',
     data: {
       format: 'json'
     },
     success: function(response) {
-      $('#results').append(`<h3>Doctors in Portland who treat ${condition}</h3>`);
+      $('#results').append(`<h3>Doctors in Portland with name ${name}</h3>`);
       if (response.data.length === 0) {
         $('.error').text('The search provided no matching results.')
       }
@@ -41,6 +40,7 @@ export function conditionSearch(condition, limit) {
                                             <p>Website: ${website}</p>
                                             <p>Accepting new patients: ${newPatients}</p></div></div>`);
       }
+
     },
     error: function(response, textStatus, xhr) {
       $('.error').text(`There was a ${response.status} error handling your request - ${xhr}`);
