@@ -8,6 +8,7 @@ $(document).ready(function() {
   const condition = $("#condition").val();
   const conditionLimit = $("#condition-limit").val();
   $(".well").hide();
+  $('#reset-button').show();
   conditionSearch(condition, conditionLimit);
   });
 
@@ -16,6 +17,16 @@ $(document).ready(function() {
   const doctorName = $("#doctor-name").val();
   const nameLimit = $("#name-limit").val();
   $(".well").hide();
+  $('#reset-button').show();
   nameSearch(doctorName, nameLimit);
+  });
+
+  $('#reset-button').click(function(event) {
+    event.preventDefault();
+    $('#condition-form')[0].reset();
+    $('#doctor-name-form')[0].reset();
+    $('#results').empty();
+    $('.well').show();
+    $('#reset-button').hide();
   });
 });
