@@ -1,5 +1,5 @@
 import './styles.css';
-import { specialtySearch } from './js/api.js';
+import { conditionSearch } from './js/condition.js';
 
 
 $(document).ready(function() {
@@ -8,6 +8,6 @@ $(document).ready(function() {
   const condition = $("#condition").val();
   const limit = $("#limit").val();
   $("#condition-well").hide();
-  specialtySearch(condition, limit);
+  conditionSearch(condition, limit);
   });
 });

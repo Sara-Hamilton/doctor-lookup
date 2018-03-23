@@ -1,4 +1,4 @@
-export function specialtySearch(condition, limit) {
+export function conditionSearch(condition, limit) {
   $.ajax({
     url:
     `https://api.betterdoctor.com/2016-03-01/doctors?query=${condition}&location=or-portland&skip=0&limit=${limit}&user_key=${process.env.exports.apiKey}`,
@@ -7,7 +7,7 @@ export function specialtySearch(condition, limit) {
       format: 'json'
     },
     success: function(response) {
-      $('#condition-first-name').append(`<h3>Doctors who treat ${condition}</h3>`);
+      $('#condition-first-name').append(`<h3>Doctors in Portland who treat ${condition}</h3>`);
       if (response.data.length === 0) {
         $('.error').text('The search provided no matching results.')
       }
