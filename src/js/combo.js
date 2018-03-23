@@ -1,17 +1,17 @@
 export function comboSearch(searchTerm, limit, type) {
 
-  let urlValue = "";
+  let searchWord = "";
   let searchTitle = "";
   if (type === "condition") {
-    urlValue = `https://api.betterdoctor.com/2016-03-01/doctors?query=${searchTerm}&location=or-portland&skip=0&limit=${limit}&user_key=${process.env.exports.apiKey}`;
+    searchWord = "query";
     searchTitle = `Doctors in Portland who treat ${searchTerm}`;
   } else if (type === "name") {
-    urlValue = `https://api.betterdoctor.com/2016-03-01/doctors?name=${searchTerm}&location=or-portland&skip=0&limit=${limit}&user_key=${process.env.exports.apiKey}`;
+    searchWord = "name";
     searchTitle = `Doctors in Portland with name ${searchTerm}`;
   }
 
   $.ajax({
-    url: urlValue,
+    url: `https://api.betterdoctor.com/2016-03-01/doctors?${searchWord}=${searchTerm}&location=or-portland&skip=0&limit=${limit}&user_key=${process.env.exports.apiKey}`,
     type: 'GET',
     data: {
       format: 'json'
@@ -44,7 +44,6 @@ export function comboSearch(searchTerm, limit, type) {
                               <p>Website: ${website}</p>
                               <p>Accepting new patients: ${newPatients}</p></div></div>`);
       }
-
     },
     error: function(response, textStatus, xhr) {
       $('.error').text(`There was a ${response.status} error handling your request - ${xhr}`);
