@@ -1,7 +1,3 @@
-// import $ from 'jquery';
-// import 'bootstrap';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-
 export function specialtySearch(condition, limit) {
   $.ajax({
   url:
@@ -11,19 +7,15 @@ export function specialtySearch(condition, limit) {
     format: 'json'
   },
   success: function(response) {
+    if (response.data.length === 0) {
+      $('.error').text('The search provided no matching results.')
+    }
     console.log(response);
     for (let i = 0; i < response.data.length; i++) {
-
       let firstName = response.data[i].profile.first_name;
       let lastName = response.data[i].profile.last_name;
       let address = response.data[i].practices[0].visit_address;
       let phone = response.data[i].practices[0].phones;
-      // let numbers = [];
-      // for (let i = 0; i < phone.length; i++) {
-      //   let number = response.data[0].practices[0].phones[i];
-      //   numbers.push(number);
-      // }
-      // console.log("numbers", numbers);
       let website = response.data[i].practices[0].website;
       if (website === undefined) {
         website = "unavailable";
@@ -39,13 +31,16 @@ export function specialtySearch(condition, limit) {
                                           <div class="panel-heading"><h4>Name: ${firstName} ${lastName}</h4></div>
                                           <div class="panel-body">
                                           <p>Address: ${address.street}, ${address.city}, ${address.state} ${address.zip}</p>
-                                          <p>Phone1: ${phone[0].number} Type: ${phone[0].type}</p>
+                                          <p>Phone: ${phone[0].number} Type: ${phone[0].type}</p>
                                           <p>Website: ${website}</p>
                                           <p>Accepting new patients: ${newPatients}</p></div></div>`);
     }
 
   },
   error: function() {
+    if (response.data.length === 0) {
+      $('.error').text('The search provided no matching results.')
+    }
     $('.error').text(`There was a problem.`)
   }
 });
