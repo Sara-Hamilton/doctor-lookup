@@ -9,6 +9,7 @@ $(document).ready(function() {
   $('#condition-form').submit(function(event) {
   event.preventDefault();
   const condition = $("#condition").val();
-  specialtySearch(condition);
+  const limit = $("#limit").val();
+  specialtySearch(condition, limit);
   });
 });
