@@ -43,6 +43,11 @@ $(document).ready(function() {
     $(".well").hide();
     $('#reset-button').show();
     let search = new DoctorSearch(searchTerm, limit, searchType);
+    if (search.type === "condition") {
+      search.searchTitle = `Doctors in Portland who treat ${searchTerm}`;
+    } else if (search.type === "name") {
+      search.searchTitle = `Doctors in Portland with name ${searchTerm}`;
+    }
     $('#results').append(`<h3>${search.searchTitle}</h3>`);
     search.getDoctorData(showData);
   });

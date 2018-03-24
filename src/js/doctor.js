@@ -6,10 +6,8 @@ export class DoctorSearch {
     this.type = type;
     if (type === "condition") {
       this.searchWord = "query";
-      this.searchTitle = `Doctors in Portland who treat ${searchTerm}`;
     } else if (type === "name") {
       this.searchWord = "name";
-      this.searchTitle = `Doctors in Portland with name ${searchTerm}`;
     }
   }
 
