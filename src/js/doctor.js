@@ -18,8 +18,8 @@ export class DoctorSearch {
     .then(function(response) {
       displayData(response);
     })
-    .fail (function(response, textStatus, xhr) {
-      $('.error').text(`There was a ${response.status} error handling your request - ${xhr}`);
+    .fail (function(error) {
+      displayData(error);
     });
   }
 

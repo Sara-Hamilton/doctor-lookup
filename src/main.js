@@ -2,7 +2,9 @@ import './styles.css';
 import { DoctorSearch } from './js/doctor.js';
 
 const showData = function(response) {
-if (response.data.length === 0) {
+  if (response.status) {
+    $('.error').text(`There was a ${response.status} error handling your request - ${response.statusText}`);
+  } else if (response.data.length === 0) {
     $('.error').text('The search provided no matching results.')
   } else {
     for (let i = 0; i < response.data.length; i++) {
@@ -41,6 +43,7 @@ $(document).ready(function() {
     $(".well").hide();
     $('#reset-button').show();
     let search = new DoctorSearch(searchTerm, limit, searchType);
+    $('#results').append(`<h3>${search.searchTitle}</h3>`);
     search.getDoctorData(showData);
   });
 
