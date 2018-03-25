@@ -43,7 +43,14 @@ Installation
 $ git clone https://github.com/Sara-Hamilton/doctor-lookup.git
 ```
 
-_Requires node.js; instructions to install:_ https://www.learnhowtoprogram.com/javascript/getting-started-with-javascript-2f9a73dc-b7f5-4a22-9101-e69d49f552ac/installing-node-js
+_Requires node.js; instructions to install:_ https://www.learnhowtoprogram.com/javascript/getting-started-with-javascript-2f9a73dc-b7f5-4a22-9101-e69d49f552ac/installing-node-js 
+
+Get a free API key from https://developer.betterdoctor.com/
+
+Create a new file named .env in the root directory of this repository containing the following code
+ ```
+exports.apiKey=[YOUR API KEY HERE]
+```
 
 Install required npm packages and dependencies:
 
