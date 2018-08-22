@@ -48,7 +48,7 @@ $(document).ready(function() {
     } else if (search.type === "name") {
       search.searchTitle = `Doctors in Portland with name ${searchTerm}`;
     }
-    $('#results').append(`<h3>${search.searchTitle}</h3>`);
+    $('#results').append(`<div class="panel panel-default"><h3>${search.searchTitle}</h3></div>`);
     search.getDoctorData(showData);
   });
 

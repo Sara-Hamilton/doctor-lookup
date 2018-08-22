@@ -1,10 +1,34 @@
+html, body{
+  background: url('http://images.unsplash.com/photo-1520931737576-7d1628862026?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=5493c0a81ca16eda67fb87d5ece762cf') no-repeat fixed;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 .error {
   color: red;
   font-size: 20px;
   margin-top: 20px;
+  background-color: white;
+  padding: 14px;
+  border-radius: 4px;
 }
 
 #reset-button {
   display: none;
   margin-bottom: 20px;
+}
+
+.jumbotron {
+  margin-top: 100px;
+}
+
+.jumbotron, .well {
+  background-color: navy;
+  opacity: .9;
+  color: aliceblue;
+}
+
+h3 {
+  padding-left: 14px;
 }
