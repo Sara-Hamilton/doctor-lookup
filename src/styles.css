@@ -6,6 +6,7 @@ html, body {
 }
 
 .error {
+  display: none;
   color: red;
   font-size: 20px;
   margin-top: 20px;
@@ -21,12 +22,6 @@ html, body {
 
 .jumbotron {
   margin-top: 100px;
-}
-
-.jumbotron, .well {
-  background-color: navy;
-  opacity: .9;
-  color: aliceblue;
 }
 
 h3 {
