@@ -2,9 +2,9 @@
   "name": "doctor-lookup",
   "version": "1.0.0",
   "engines": {
-    "node": ""
-  }
-  "description": "8.10.0",
+    "node": "8.10.0"
+  },
+  "description": "",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode development",
