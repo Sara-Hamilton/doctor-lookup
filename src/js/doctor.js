@@ -1,4 +1,4 @@
-export class DoctorSearch {
+class DoctorSearch {
 
   constructor(searchTerm, limit, type) {
     this.searchTerm = searchTerm;
@@ -21,4 +21,6 @@ export class DoctorSearch {
     });
   }
 
-}
+};
+
+module.exports = DoctorSearch;

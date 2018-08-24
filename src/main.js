@@ -1,7 +1,8 @@
 // import './styles.css';
-import { DoctorSearch } from './js/doctor.js';
+// import { DoctorSearch } from './js/doctor.js';
 
 const styles = require('./styles.css');
+const DoctorSearch = require('./js/doctor.js');
 
 const showData = function(response) {
   if (response.status) {
