@@ -1,5 +1,7 @@
-import './styles.css';
+// import './styles.css';
 import { DoctorSearch } from './js/doctor.js';
+
+const styles = require('./styles.css');
 
 const showData = function(response) {
   if (response.status) {
