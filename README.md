@@ -1,6 +1,6 @@
 # _Doctor Lookup_
 
-##### Web app that uses the BetterDoctor API to allow users to search for doctors in their area by medical issue or doctor name. 03/23/2018
+##### Web app that uses the BetterDoctor API to allow users to search for doctors in their area by medical issue or doctor name. Visit the deployed app at https://doctorlookup-80ac0.firebaseapp.com 03/23/2018
 
 ## By Sara Hamilton
 
@@ -35,6 +35,7 @@ This is the Epicodus weekly project for week 2 of the JavaScript course. It uses
 * ES Lint
 * Webpack
 * Babel
+* Firebase
 
 Installation
 ------------
@@ -43,7 +44,7 @@ Installation
 $ git clone https://github.com/Sara-Hamilton/doctor-lookup.git
 ```
 
-_Requires node.js; instructions to install:_ https://www.learnhowtoprogram.com/javascript/getting-started-with-javascript-2f9a73dc-b7f5-4a22-9101-e69d49f552ac/installing-node-js 
+_Requires node.js; instructions to install:_ https://www.learnhowtoprogram.com/javascript/getting-started-with-javascript-2f9a73dc-b7f5-4a22-9101-e69d49f552ac/installing-node-js
 
 Get a free API key from https://developer.betterdoctor.com/
 

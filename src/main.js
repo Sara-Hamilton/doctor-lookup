@@ -1,5 +1,8 @@
-import './styles.css';
-import { DoctorSearch } from './js/doctor.js';
+// import './styles.css';
+// import { DoctorSearch } from './js/doctor.js';
+
+const styles = require('./styles.css');
+const DoctorSearch = require('./js/doctor.js');
 
 const showData = function(response) {
   if (response.status) {
@@ -58,7 +61,11 @@ $(document).ready(function() {
     $('#search-form')[0].reset();
     $('#results').empty();
     $('.error').empty();
+<<<<<<< HEAD
     $('.error').hide();
+=======
+    $('.error').hide()
+>>>>>>> 033399c8f161d89760cd740efc9dd03c63f13b97
     $('.well').show();
     $('#reset-button').hide();
   });
