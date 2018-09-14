@@ -3,8 +3,10 @@ import { DoctorSearch } from './js/doctor.js';
 
 const showData = function(response) {
   if (response.status) {
+    $('.error').show()
     $('.error').text(`There was a ${response.status} error handling your request - ${response.statusText}`);
   } else if (response.data.length === 0) {
+    $('.error').show()
     $('.error').text('The search provided no matching results.')
   } else {
     for (let i = 0; i < response.data.length; i++) {
@@ -56,6 +58,7 @@ $(document).ready(function() {
     $('#search-form')[0].reset();
     $('#results').empty();
     $('.error').empty();
+    $('.error').hide();
     $('.well').show();
     $('#reset-button').hide();
   });
